@@ -1,1 +1,8 @@
+**Intl-tnp-Unig** is a database designed for more accurate annotation of integrons and transposons in sequences.
+
+If you have any questions, please create an issue, or contact wyh (1365298466@qq.com).
+
+### **Database construction process**
 To quantify integron, marker protein sequence of integrase was collected by searching the keywords of IntI, IntI1, IntI2, and IntI3 against the UniRef100 database. The hits of each of the four keywords above were clustered using CD-HIT (Fu et al., 2012) (parameter: -c 0.90 -s 0.5 -aS 0.5 -g 1 -n 5) to generate representative sequences, and the resulting representative sequences were combined to generate an database of integron marker protein. The database of marker proteins of transposon was prepared according to the method above by searching the keywords of Tnp, TnpA, TnpB, TnpC, TnpM, TnpR, TnpS, and TnpT against the UniRef100 database. The abundance of marker proteins of integron and transposon was estimated by aligning 10000000 reads of each sample to the combined database of integron and transposon with DIAMOND, and alignment with both identity greater than 90% and coverage greater than 50% were used to calculate coverage of the markers.
+
+
